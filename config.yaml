@@ -4,7 +4,7 @@ configSync:
   parts: {}
 hotkeys:
   toggle-window:
-    - Ctrl-Space
+    - Ctrl-Shift-Space
   copy-current-path: []
   ctrl-c:
     - Ctrl-C
@@ -195,6 +195,7 @@ terminal:
   font: Hack Nerd Font Mono
   profile: local:custom:WSL-Ubuntu:7057f7b3-daab-45cc-a2ec-0be4931105de
   fontSize: 13
+  showRecentProfiles: 0
 ssh: {}
 clickableLinks: {}
 accessibility: {}
@@ -213,6 +214,14 @@ profileBlacklist:
   - local:clink
   - local:powershell
   - local:default
+  - local:cmd
+  - socket:template
+  - serial:template
+  - local:git-bash
+  - serial:port-COM1
+  - serial:port-COM3
+  - serial:port-COM4
+  - telnet:template
 enableAnalytics: false
 profiles:
   - type: local
@@ -273,7 +282,7 @@ profiles:
       env:
         TERM: xterm-color
         COLORTERM: truecolor
-      cwd: D:\dev
+      cwd: \\wsl.localhost\Ubuntu\home\diego
     id: local:custom:WSL-Ubuntu:7057f7b3-daab-45cc-a2ec-0be4931105de
   - type: local
     name: PowerShell
@@ -313,10 +322,10 @@ profiles:
       0-4.55-2.015-4.55-4.5s2.037-4.5 4.55-4.5z" fill="#fff"></path></g></svg>
     options:
       command: powershell.exe
+      env: {}
+      cwd: C:\
       args:
         - '-nologo'
-      env:
-        WT_SESSION: 0
     id: local:custom:PowerShell:bd764fba-acd5-4746-a988-a3a2bee55ef3
   - type: local
     name: Git Bash
@@ -356,3 +365,4 @@ profiles:
       env:
         WT_SESSION: 0
     id: local:custom:Git-Bash:495537db-81aa-413a-80ef-5d2afebe5f88
+language: es-ES
