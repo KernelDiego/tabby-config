@@ -23,10 +23,6 @@ hotkeys:
     - Ctrl-Shift--
   reset-zoom:
     - Ctrl-0
-  home:
-    - Home
-  end:
-    - End
   previous-word:
     - Ctrl-Left
   next-word:
@@ -167,6 +163,8 @@ hotkeys:
   duplicate-tab: []
   split-right:
     - Ctrl-Shift-Right
+  home: []
+  end: []
 terminal:
   searchOptions: {}
   colorScheme:
